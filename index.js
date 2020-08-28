@@ -15,7 +15,18 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
+    console.log("hi")
+  try {
+    const answers = await promptUser();
 
+    const html = generateHTML(answers);
+
+    await writeFileAsync("index.html", html);
+
+    console.log("Successfully wrote to index.html");
+  } catch(err) {
+    console.log(err);
+  }
 }
 
 // function call to initialize program
