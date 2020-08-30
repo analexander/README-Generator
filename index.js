@@ -1,42 +1,78 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const path = require("path");
-const generateMarkdown = require("./utils/generateMarkdown");
 
-// array of questions for user
-const questions = [
-  {
-    type: "input",
-    name: "github",
-    message: "What is your GitHub username?"
-  },
-  {
-    type: "input",
-    name: "email",
-    message: "What is your email?"
-  }
+const main = async () => {
+  const questions = [
+    {
+      type: "string",
+      name: "title",
+      message: "What is the title of your project?",
+    },
+    {
+      type: "string",
+      name: "description",
+      message: "What is the description of your project?",
+    },
+    {
+      type: "list",
+      name: "license",
+      message: "What kind of license should your project have?",
+      choices: [
+        'GNU AGPLv3',
+        'Apache',
+        'MIT',
+        'Boost Software License'
+      ]
+    },
+  ];
 
-];
+  const answers = mapToMarkdown(await inquirer.prompt(questions));
+  markdownToFile('READMETEST.md', answers);
+};
 
-// function to write README file
-function writeToFile(fileName, data) {
+const stringToMarkdownHeading1 = (value) => {
+  return "# " + value;
+};
+
+const stringToMarkdownHeading2 = (value) => {
+  return `## ${value}`;
+};
+
+const createMarkdownURL = (name, url)  => {
+  return `[${name}](${url})`
+} 
+
+const createMarkdownListItem = (value) => {
+  return `* ${value}`
 }
 
-// function to initialize program
-function init() {
-    console.log("hi")
-  try {
-    const answers = await promptUser();
-
-    const readMe = generateMarkdown(questions);
-
-    await writeFileAsync("README.md", readMe);
-
-    console.log("Successfully wrote to README.md");
-  } catch(err) {
-    console.log(err);
-  }
+const createTitleSection = (title) => {
+  return stringToMarkdownHeading1(title);
 }
 
-// function call to initialize program
-init();
+const createTableOfContents = () => {
+  return [
+    stringToMarkdownHeading2("TABLE OF CONTENTS"),
+    createMarkdownListItem(createMarkdownURL("Installation", "#Installation")),
+    createMarkdownListItem(createMarkdownURL("Usage", "#Usage")),
+    createMarkdownListItem(createMarkdownURL("License", "#License")),
+    createMarkdownListItem(createMarkdownURL("Contributing", "#Contributing")),
+    createMarkdownListItem(createMarkdownURL("Tests", "#Tests")),
+    createMarkdownListItem(createMarkdownURL("Questions", "#Questions"))
+  ]
+}
+
+const mapToMarkdown = (answers) => {
+  return [
+    createTitleSection(answers.title),
+    ...createTableOfContents(),
+  ].join("\n\n");
+}
+
+const markdownToFile = (fileName, data) => {
+  fs.writeFileSync(fileName, data, (error, file) => {
+    console.error(`could not write to file ${file} because ${error}`)
+  });
+};
+
+main();
