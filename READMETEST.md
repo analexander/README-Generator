@@ -1,10 +1,10 @@
-# Poopybutts
+# ewerwerewrw
 
-## DESCRIPTION
+## Description
 
-bloopy poops
+fdslkfjdskljf
 
-## TABLE OF CONTENTS
+## Table of Contents
 
 * [Installation](#Installation)
 
@@ -17,3 +17,8 @@ bloopy poops
 * [Tests](#Tests)
 
 * [Questions](#Questions)
+
+## Installation
+
+To install necessary dependencies, run the following command: 
+ fjfjfjf

@@ -77,6 +77,8 @@ const mapToMarkdown = (answers) => {
     stringToMarkdownHeading2("Description"),
     createMarkdownString(answers.description),
     ...createTableOfContents(),
+    stringToMarkdownHeading2("Installation"),
+    createMarkdownString(`To install necessary dependencies, run the following command: \n ${answers.command}`),
   ].join("\n\n");
 }
 
