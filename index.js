@@ -28,7 +28,7 @@ function init() {
   try {
     const answers = await promptUser();
 
-    const readMe = generateMarkdown(answers);
+    const readMe = generateMarkdown(questions);
 
     await writeFileAsync("README.md", readMe);
 
