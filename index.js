@@ -24,6 +24,11 @@ const main = async () => {
         'Boost Software License'
       ]
     },
+    {
+      type: "string",
+      name: "command",
+      message: "What command should be run to install dependencies?",
+    },
   ];
 
   const answers = mapToMarkdown(await inquirer.prompt(questions));
@@ -46,13 +51,17 @@ const createMarkdownListItem = (value) => {
   return `* ${value}`
 }
 
+const createMarkdownString = (value) => {
+  return `${value}`
+}
+
 const createTitleSection = (title) => {
   return stringToMarkdownHeading1(title);
 }
 
 const createTableOfContents = () => {
   return [
-    stringToMarkdownHeading2("TABLE OF CONTENTS"),
+    stringToMarkdownHeading2("Table of Contents"),
     createMarkdownListItem(createMarkdownURL("Installation", "#Installation")),
     createMarkdownListItem(createMarkdownURL("Usage", "#Usage")),
     createMarkdownListItem(createMarkdownURL("License", "#License")),
@@ -65,6 +74,8 @@ const createTableOfContents = () => {
 const mapToMarkdown = (answers) => {
   return [
     createTitleSection(answers.title),
+    stringToMarkdownHeading2("Description"),
+    createMarkdownString(answers.description),
     ...createTableOfContents(),
   ].join("\n\n");
 }
