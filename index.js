@@ -5,6 +5,21 @@ const main = async () => {
   const questions = [
     {
       type: "string",
+      name: "username",
+      message: "What is your GitHub username?",
+    },
+    {
+      type: "string",
+      name: "email",
+      message: "What is your email?",
+    },
+    {
+      type: "string",
+      name: "url",
+      message: "What is the URL of your project?",
+    },
+    {
+      type: "string",
       name: "title",
       message: "What is the title of your project?",
     },
