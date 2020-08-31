@@ -63,7 +63,7 @@ const main = async () => {
   ];
 
   const answers = mapToMarkdown(await inquirer.prompt(questions));
-  markdownToFile('READMETEST.md', answers);
+  markdownToFile('READMEsample.md', answers);
 };
 
 const stringToMarkdownHeading1 = (value) => {

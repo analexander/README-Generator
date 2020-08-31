@@ -1,14 +1,11 @@
-# PROJECT NAME
+# README Generator
 
-[![Github License]
-type: list
- (url)]
+## Description
 
-## DESCRIPTION
+This project uses prompts in Node.js to generate a README.md file for a user's project.
 
-(type: editor)
+## Table of Contents
 
-## TABLE OF CONTENTS
 * [Installation](#Installation)
 
 * [Usage](#Usage)
@@ -21,30 +18,28 @@ type: list
 
 * [Questions](#Questions)
 
-## INSTALLATION
-To install necessary dependencies, run the following command:
+## Installation
 
-(type: string)
+To install necessary dependencies, run the following command: 
+ npm install
 
-## USAGE
+## Usage
 
-(type: editor)
+All the user needs to do is enter the prompts with information regarding their project and a README file will be generated.
 
-## LICENSE
+## License
 
-(type: list)
+This project is licensed under the APACHE 2.0 license.
 
-## CONTRIBUTING
+## Contributing
 
-(type: editor)
+No contributions were made.
 
-## TESTS
-To run tests, run the following command:
+## Tests
 
-(type: string)
+To run tests, run the following command: 
+ npm run test
 
-## QUESTIONS
+## Questions
 
-If you have any questions about the repo, open an issue or contact [name] directly at [email]
-
-(type: string)
+If you have any questions about the repo, open an issue or contact [analexander] directly at angale22@gmail.com.
