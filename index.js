@@ -123,7 +123,7 @@ const mapToMarkdown = (answers) => {
     createMarkdownString(answers.description),
     ...createTableOfContents(),
     stringToMarkdownHeading2("Installation"),
-    createMarkdownString(`To install necessary dependencies, run the following command: \n ${answers.command}`),
+    createMarkdownString("To install necessary dependencies, run the following command:" +  "\n" + "````" + "\n" + (answers.command) + "\n" + "````"),
     stringToMarkdownHeading2("Usage"),
     createMarkdownString(answers.usage),
     stringToMarkdownHeading2("License"),
@@ -131,7 +131,7 @@ const mapToMarkdown = (answers) => {
     stringToMarkdownHeading2("Contributing"),
     createMarkdownString(answers.contribute),
     stringToMarkdownHeading2("Tests"),
-    createMarkdownString(`To run tests, run the following command: \n ${answers.tests}`),
+    createMarkdownString("To run tests, run the following command:" +  "\n" + "````" + "\n" + (answers.tests) + "\n" + "````"),
     stringToMarkdownHeading2("Questions"),
     createMarkdownString(`If you have any questions about the repo, open an issue or contact [${answers.username}] directly at ${answers.email}.`),
   ].join("\n\n");
