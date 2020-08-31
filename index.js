@@ -35,6 +35,11 @@ const main = async () => {
       name: "usage",
       message: "What does the user need to know about using the repo?",
     },
+    {
+      type: "string",
+      name: "contribute",
+      message: "What does the user need to know about contributing to the repo?",
+    },
   ];
 
   const answers = mapToMarkdown(await inquirer.prompt(questions));
@@ -89,6 +94,8 @@ const mapToMarkdown = (answers) => {
     createMarkdownString(answers.usage),
     stringToMarkdownHeading2("License"),
     createMarkdownString(`This project is licensed under the ${answers.license} license.`),
+    stringToMarkdownHeading2("Contributing"),
+    createMarkdownString(answers.contribute),
   ].join("\n\n");
 }
 

@@ -1,8 +1,8 @@
-# Project 
+# hello
 
 ## Description
 
-it is a thing
+hello
 
 ## Table of Contents
 
@@ -21,12 +21,16 @@ it is a thing
 ## Installation
 
 To install necessary dependencies, run the following command: 
- npm bloeeop
+ yes
 
 ## Usage
 
-nothing
+no
 
 ## License
 
 This project is licensed under the GPL 3.0 license.
+
+## Contributing
+
+leeops
