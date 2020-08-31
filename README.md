@@ -2,7 +2,7 @@
 
 ## Description
 
-jlfkjdkl
+This project creates a README.md file based on user input in Node.js. The user is prompted with a series of questions about their project and those answers are then populated to a README.md file.
 
 ## Table of Contents
 
@@ -21,25 +21,29 @@ jlfkjdkl
 ## Installation
 
 To install necessary dependencies, run the following command: 
- fjdklsafjl
+````
+npm install
+````
 
 ## Usage
 
-sdlkfjdskl
+
 
 ## License
 
-This project is licensed under the GPL 3.0 license.
+This project has no license.
 
 ## Contributing
 
-fjldksfjlk
+This project has no contributors.
 
 ## Tests
 
 To run tests, run the following command: 
- dsjfkldjsl
+````
+npm run test
+````
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact [bloeep] directly at jdsklfjs.
+If you have any questions about the repo, open an issue or contact [analexander] directly at angale22@gmail.com.

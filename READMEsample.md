@@ -4,7 +4,7 @@
 
 ## Description
 
-hi
+what
 
 ## Table of Contents
 
@@ -23,25 +23,25 @@ hi
 ## Installation
 
 To install necessary dependencies, run the following command: 
- hi
+ npm install
 
 ## Usage
 
-hi
+things
 
 ## License
 
-This project is licensed under the MIT license.
+This project is licensed under the None license.
 
 ## Contributing
 
-hi
+nothing
 
 ## Tests
 
 To run tests, run the following command: 
- hi
+ npm run test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact [hi] directly at hi.
+If you have any questions about the repo, open an issue or contact [bloop] directly at bleep.

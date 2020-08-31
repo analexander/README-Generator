@@ -118,7 +118,7 @@ const createLicenseBadges = () => {
 const mapToMarkdown = (answers) => {
   return [
     createTitleSection(answers.title),
-    createLicenseBadges(answers.license),
+    ...createLicenseBadges(),
     stringToMarkdownHeading2("Description"),
     createMarkdownString(answers.description),
     ...createTableOfContents(),
