@@ -118,6 +118,8 @@ const mapToMarkdown = (answers) => {
     createMarkdownString(answers.contribute),
     stringToMarkdownHeading2("Tests"),
     createMarkdownString(`To run tests, run the following command: \n ${answers.tests}`),
+    stringToMarkdownHeading2("Questions"),
+    createMarkdownString(`If you have any questions about the repo, open an issue or contact [${answers.username}] directly at ${answers.email}.`),
   ].join("\n\n");
 }
 
