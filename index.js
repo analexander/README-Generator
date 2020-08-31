@@ -18,10 +18,11 @@ const main = async () => {
       name: "license",
       message: "What kind of license should your project have?",
       choices: [
-        'GNU AGPLv3',
-        'Apache',
         'MIT',
-        'Boost Software License'
+        'APACHE 2.0',
+        'GPL 3.0',
+        'BSD 3',
+        'None'
       ]
     },
     {
@@ -86,6 +87,8 @@ const mapToMarkdown = (answers) => {
     createMarkdownString(`To install necessary dependencies, run the following command: \n ${answers.command}`),
     stringToMarkdownHeading2("Usage"),
     createMarkdownString(answers.usage),
+    stringToMarkdownHeading2("License"),
+    createMarkdownString(`This project is licensed under the ${answers.license} license.`),
   ].join("\n\n");
 }
 

@@ -1,8 +1,8 @@
-# ewerwerewrw
+# Project 
 
 ## Description
 
-fdslkfjdskljf
+it is a thing
 
 ## Table of Contents
 
@@ -21,4 +21,12 @@ fdslkfjdskljf
 ## Installation
 
 To install necessary dependencies, run the following command: 
- fjfjfjf
+ npm bloeeop
+
+## Usage
+
+nothing
+
+## License
+
+This project is licensed under the GPL 3.0 license.
