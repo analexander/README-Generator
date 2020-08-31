@@ -1,8 +1,10 @@
-# README Generator
+# hi
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT),[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0),[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0),[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 ## Description
 
-This project uses prompts in Node.js to generate a README.md file for a user's project.
+hi
 
 ## Table of Contents
 
@@ -21,25 +23,25 @@ This project uses prompts in Node.js to generate a README.md file for a user's p
 ## Installation
 
 To install necessary dependencies, run the following command: 
- npm install
+ hi
 
 ## Usage
 
-All the user needs to do is enter the prompts with information regarding their project and a README file will be generated.
+hi
 
 ## License
 
-This project is licensed under the APACHE 2.0 license.
+This project is licensed under the MIT license.
 
 ## Contributing
 
-No contributions were made.
+hi
 
 ## Tests
 
 To run tests, run the following command: 
- npm run test
+ hi
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact [analexander] directly at angale22@gmail.com.
+If you have any questions about the repo, open an issue or contact [hi] directly at hi.
