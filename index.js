@@ -29,6 +29,11 @@ const main = async () => {
       name: "command",
       message: "What command should be run to install dependencies?",
     },
+    {
+      type: "string",
+      name: "usage",
+      message: "What does the user need to know about using the repo?",
+    },
   ];
 
   const answers = mapToMarkdown(await inquirer.prompt(questions));
@@ -79,6 +84,8 @@ const mapToMarkdown = (answers) => {
     ...createTableOfContents(),
     stringToMarkdownHeading2("Installation"),
     createMarkdownString(`To install necessary dependencies, run the following command: \n ${answers.command}`),
+    stringToMarkdownHeading2("Usage"),
+    createMarkdownString(answers.usage),
   ].join("\n\n");
 }
 
