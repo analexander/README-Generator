@@ -62,9 +62,67 @@ const main = async () => {
     },
   ];
 
+  // const licenseBadgeInfo = [
+  //   {
+  //     name: "MIT",
+  //     badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+  //   },
+  //   {
+  //     name: "APACHE 2.0",
+  //     badge: "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+  //   },
+  //   {
+  //     name: "GPL 3.0",
+  //     badge: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+  //   },
+  //   {
+  //     name: "BSD 3",
+  //     badge: "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+  //   }
+  // ];
+
   const answers = mapToMarkdown(await inquirer.prompt(questions));
   markdownToFile('READMEsample.md', answers);
+  console.log(answers);
 };
+  // const chosenLicense = answers.license;
+  // const chosenBadge = answers.badge
+
+  // licenseBadgeInfo.forEach(license => {
+  //   if (license.name === chosenLicense) {
+  //       chosenBadge = license.badge;
+  //   }
+  // });
+
+
+
+// const licenseBadgeInfo = [
+//   {
+//     name: "MIT",
+//     badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+//   },
+//   {
+//     name: "APACHE 2.0",
+//     badge: "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+//   },
+//   {
+//     name: "GPL 3.0",
+//     badge: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+//   },
+//   {
+//     name: "BSD 3",
+//     badge: "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+//   }
+// ]
+
+// const chosenLicense = answers.license;
+// const chosenBadge = answers.badge
+
+// licenseBadgeInfo.forEach(license => {
+//   if (license.name === chosenLicense) {
+//       chosenBadge = license.badge;
+//   }
+// })
 
 const stringToMarkdownHeading1 = (value) => {
   return "# " + value;
@@ -106,19 +164,24 @@ const createTableOfContents = () => {
   ]
 }
 
-const createLicenseBadges = () => {
-  return [
-    badgeMarkup("License: MIT", "https://img.shields.io/badge/License-MIT-yellow.svg", "https://opensource.org/licenses/MIT"),
-    badgeMarkup("License", "https://img.shields.io/badge/License-Apache%202.0-blue.svg", "https://opensource.org/licenses/Apache-2.0"),
-    badgeMarkup("License: GPL v3", "https://img.shields.io/badge/License-GPLv3-blue.svg", "https://www.gnu.org/licenses/gpl-3.0"),
-    badgeMarkup("License", "https://img.shields.io/badge/License-BSD%203--Clause-blue.svg", "https://opensource.org/licenses/BSD-3-Clause")
-  ]
+const createLicenseBadges = (answers) => {
+  if (answers.license === "MIT") {
+    return badgeMarkup("License: MIT", "https://img.shields.io/badge/License-MIT-yellow.svg", "https://opensource.org/licenses/MIT")
+  } else if (answers.license === "APACHE 2.0") {
+    return badgeMarkup("License", "https://img.shields.io/badge/License-Apache%202.0-blue.svg", "https://opensource.org/licenses/Apache-2.0")
+  } else if (answers.license === "GPL 3.0") {
+    return badgeMarkup("License: GPL v3", "https://img.shields.io/badge/License-GPLv3-blue.svg", "https://www.gnu.org/licenses/gpl-3.0")
+  } else if (answers.license === "BSD 3") {
+    return badgeMarkup("License", "https://img.shields.io/badge/License-BSD%203--Clause-blue.svg", "https://opensource.org/licenses/BSD-3-Clause")
+  } else {
+    return ("")
+  }
 }
 
 const mapToMarkdown = (answers) => {
   return [
     createTitleSection(answers.title),
-    ...createLicenseBadges(),
+    createLicenseBadges(answers),
     stringToMarkdownHeading2("Description"),
     createMarkdownString(answers.description),
     ...createTableOfContents(),

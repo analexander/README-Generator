@@ -35,7 +35,7 @@ This project has no license.
 
 ## Contributing
 
-This project has no contributors.
+[analexander] angale22@gmail.com
 
 ## Tests
 
