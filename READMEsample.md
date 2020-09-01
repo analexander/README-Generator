@@ -1,10 +1,10 @@
-# f
+# Some-Project-Name
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-f
+Swag wolf chillwave 3 wolf moon. Tacos street art chillwave gochujang trust fund. Brunch everyday carry tacos enamel pin kickstarter. Biodiesel small batch paleo, prism DIY YOLO lomo godard selvage succulents asymmetrical.
 
 ## Table of Contents
 
@@ -24,28 +24,28 @@ f
 
 To install necessary dependencies, run the following command:
 ````
-
+npm install
 ````
 
 ## Usage
 
-
+Tousled selfies heirloom live-edge chillwave irony seitan locavore umami YOLO bitters. Letterpress etsy celiac tattooed master cleanse gluten-free listicle skateboard bitters sriracha lo-fi hella. Fingerstache chillwave bitters scenester master cleanse selfies hella, flannel forage.
 
 ## License
 
-This project is licensed under the GPL 3.0 license.
+This project is licensed under the MIT license.
 
 ## Contributing
 
-
+Banh mi thundercats swag, whatever kinfolk hexagon pickled waistcoat meditation ugh neutra woke brunch cloud bread master cleanse.
 
 ## Tests
 
 To run tests, run the following command:
 ````
-
+npm run test
 ````
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact [f] directly at f.
+If you have any questions about the repo, open an issue or contact [analexander] directly at angale22@gmail.com.

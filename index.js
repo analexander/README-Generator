@@ -1,6 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+// array of objects with prompt questions
+
 const main = async () => {
   const questions = [
     {
@@ -62,67 +64,11 @@ const main = async () => {
     },
   ];
 
-  // const licenseBadgeInfo = [
-  //   {
-  //     name: "MIT",
-  //     badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-  //   },
-  //   {
-  //     name: "APACHE 2.0",
-  //     badge: "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
-  //   },
-  //   {
-  //     name: "GPL 3.0",
-  //     badge: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
-  //   },
-  //   {
-  //     name: "BSD 3",
-  //     badge: "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
-  //   }
-  // ];
-
   const answers = mapToMarkdown(await inquirer.prompt(questions));
   markdownToFile('READMEsample.md', answers);
-  console.log(answers);
 };
-  // const chosenLicense = answers.license;
-  // const chosenBadge = answers.badge
 
-  // licenseBadgeInfo.forEach(license => {
-  //   if (license.name === chosenLicense) {
-  //       chosenBadge = license.badge;
-  //   }
-  // });
-
-
-
-// const licenseBadgeInfo = [
-//   {
-//     name: "MIT",
-//     badge: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-//   },
-//   {
-//     name: "APACHE 2.0",
-//     badge: "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
-//   },
-//   {
-//     name: "GPL 3.0",
-//     badge: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
-//   },
-//   {
-//     name: "BSD 3",
-//     badge: "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
-//   }
-// ]
-
-// const chosenLicense = answers.license;
-// const chosenBadge = answers.badge
-
-// licenseBadgeInfo.forEach(license => {
-//   if (license.name === chosenLicense) {
-//       chosenBadge = license.badge;
-//   }
-// })
+//functions to setup readme markup
 
 const stringToMarkdownHeading1 = (value) => {
   return "# " + value;
@@ -178,6 +124,8 @@ const createLicenseBadges = (answers) => {
   }
 }
 
+//function to take in markup functions with user input values
+
 const mapToMarkdown = (answers) => {
   return [
     createTitleSection(answers.title),
@@ -199,6 +147,8 @@ const mapToMarkdown = (answers) => {
     createMarkdownString(`If you have any questions about the repo, open an issue or contact [${answers.username}] directly at ${answers.email}.`),
   ].join("\n\n");
 }
+
+// function that generates .md file
 
 const markdownToFile = (fileName, data) => {
   fs.writeFileSync(fileName, data, (error, file) => {
