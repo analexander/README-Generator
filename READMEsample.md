@@ -1,10 +1,10 @@
-# Some-Project-Name
+# Example-Project
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## Description
 
-Swag wolf chillwave 3 wolf moon. Tacos street art chillwave gochujang trust fund. Brunch everyday carry tacos enamel pin kickstarter. Biodiesel small batch paleo, prism DIY YOLO lomo godard selvage succulents asymmetrical.
+Are creatures of the cosmos not a sunrise but a galaxyrise two ghostly white figures in coveralls and helmets are softly dancing great turbulent clouds Vangelis white dwarf. A still more glorious dawn awaits the carbon in our apple pies cosmic ocean network of wormholes the sky calls to us a still more glorious dawn awaits. Vanquish the impossible Sea of Tranquility finite but unbounded vanquish the impossible courage of our questions Sea of Tranquility.
 
 ## Table of Contents
 
@@ -29,15 +29,15 @@ npm install
 
 ## Usage
 
-Tousled selfies heirloom live-edge chillwave irony seitan locavore umami YOLO bitters. Letterpress etsy celiac tattooed master cleanse gluten-free listicle skateboard bitters sriracha lo-fi hella. Fingerstache chillwave bitters scenester master cleanse selfies hella, flannel forage.
+Are creatures of the cosmos not a sunrise but a galaxyrise two ghostly white figures in coveralls and helmets are softly dancing great turbulent clouds Vangelis white dwarf. A still more glorious dawn awaits the carbon in our apple pies cosmic ocean network of wormholes the sky calls to us a still more glorious dawn awaits. Vanquish the impossible Sea of Tranquility finite but unbounded vanquish the impossible courage of our questions Sea of Tranquility.
 
 ## License
 
-This project is licensed under the MIT license.
+This project is licensed under the GPL 3.0 license.
 
 ## Contributing
 
-Banh mi thundercats swag, whatever kinfolk hexagon pickled waistcoat meditation ugh neutra woke brunch cloud bread master cleanse.
+Are creatures of the cosmos not a sunrise but a galaxyrise two ghostly white figures in coveralls and helmets are softly dancing great turbulent clouds Vangelis white dwarf. A still more glorious dawn awaits the carbon in our apple pies cosmic ocean network of wormholes the sky calls to us a still more glorious dawn awaits. Vanquish the impossible Sea of Tranquility finite but unbounded vanquish the impossible courage of our questions Sea of Tranquility.
 
 ## Tests
 
